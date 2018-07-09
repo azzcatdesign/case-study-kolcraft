@@ -1,0 +1,36 @@
+.wrap--head {
+  @include clearfix;
+  // Modern alternative to clearfix hack, not fully supported yet.
+  display: flow-root;
+  background-color: rgba($black, 0.9);
+  position: relative;
+  
+}
+.number--circled {  
+  color: $black;  
+  background-color: $logo_green;
+  border-radius: 50%;
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 8rem;  
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  top: -1rem;
+  left: -2rem;
+  @include for-tablet-landscape-up {
+    font-size: 7rem;
+    line-height: 10rem;
+    height: 10rem;
+    width: 10rem;    
+  }
+}
+.number--text {
+  color: $white;
+  margin-bottom: 1rem;
+  margin-left: 7rem;
+  @include for-tablet-landscape-up {
+    margin-left: 9rem;
+  }
+}

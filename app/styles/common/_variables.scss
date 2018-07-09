@@ -1,0 +1,29 @@
+/** Colors */
+$blue: #477dca;
+$header-font-color: $percent_30;
+$logo_green: #D6DE23;
+$logo_gray: #969696;
+$primary: $logo_green;
+
+/** Fonts  */
+// @import url("https://use.typekit.net/sxb8tkh.css");
+// In case we want to speed things up, and use a system font for text.
+// See https://css-tricks.com/snippets/css/system-font-stack/
+$system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$family-sans-serif: "bree", $system-font;
+$family-serif: "bree-serif", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$family-stencil: "paralucent-stencil", $family-serif;
+
+$body-font: $family-sans-serif;
+$header-font: $family-serif;
+$stencil-font: $family-stencil;
+
+// See https://jamonserrano.github.io/plumber-sass/baselines/
+// for baseline ratios.
+$body-baseline: 0.220; // This ratio explicit to Bree.
+
+$header-baseline: 0.102000; // This ratio explicit to Bree Serif
+/* Varying baseline among fonts in the same family
+Although some weights or styles in the same family can sit on different baselines, it’s generally fine to use the one for the regular font. If pixel perfection is important, set individual baselines for each font. THERFORE, we're only using the $body-baseline. */
+

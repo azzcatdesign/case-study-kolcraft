@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<p>There are many commands available to help you build and test sites. Here are a few highlights to get started with.</p>
+
+<h2 id="watchforchangesautomaticallyrefreshacrossdevices">Watch For Changes &amp; Automatically Refresh Across Devices</h2>
+
+<pre><code class="sh">$ gulp serve
+</code></pre>
+
+<p>This outputs an IP address you can use to locally test and another that can be used on devices
+connected to your network.
+<code>serve</code> does not use <a href="http://www.html5rocks.com/en/tutorials/service-worker/introduction/">service worker</a>
+caching, so your site will stop being available when the web server stops running.</p>
+
+<h2 id="buildoptimize">Build &amp; Optimize</h2>
+
+<pre><code class="sh">$ gulp
+</code></pre>
+
+<p>Build and optimize the current project, ready for deployment.
+This includes linting as well as image, script, stylesheet and HTML optimization and minification.
+Also, a <a href="http://www.html5rocks.com/en/tutorials/service-worker/introduction/">service worker</a>
+script will be automatically generated, which will take care of precaching your sites' resources.
+On browsers that <a href="https://jakearchibald.github.io/isserviceworkerready/">support</a> service
+workers, the site will be loaded directly from the service worker cache, bypassing the server.
+This means that this version of the site will work when the server isn&#8217;t running or when there is
+no network connectivity.</p>
+
+<h2 id="servethefullybuiltoptimizedsite">Serve the Fully Built &amp; Optimized Site</h2>
+
+<pre><code class="sh">$ gulp serve:dist
+</code></pre>
+
+<p>This outputs an IP address you can use to locally test and another that can be used on devices
+connected to your network.
+<code>serve:dist</code> includes will serve a local copy of the built and optimized site generated as part
+of the <code>default</code> task.
+Because the optimized site includes a service worker which serves your site directly from the
+cache, you will need to reload the page after regenerating the site to pick up the latest changes.
+<code>serve:dist</code> uses a different HTTP port than <code>serve</code>, which means that the service workers are
+kept isolated in different <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Registering_your_worker">scopes</a>.</p>
+
+<h2 id="differencebetweenserveserve:dist">Difference Between <code>serve</code> &amp; <code>serve:dist</code></h2>
+
+<p>It is important to note a difference between the <code>serve</code> and <code>serve:dist</code> tasks.</p>
+
+<ul>
+<li><code>serve</code> uses a no-op <code>service-worker.js</code> and cannot run offline.</li>
+<li><code>serve:dist</code> uses the <code>sw-precache</code>-generated output and can run offline.</li>
+</ul>
+
+<p>The <code>serve</code> task runs on port 3000 and <code>serve:dist</code> runs on port 3001.
+The main purpose is to ensure that different service workers will not impact each other&#8217;s environment.
+Using the <code>sw-precache</code>-generated output makes it very difficult to quickly test local changes which is not ideal for a development server environment.</p>
+
+<h2 id="performanceinsights">Performance Insights</h2>
+
+<pre><code class="sh">$ gulp pagespeed
+</code></pre>
+
+<p>Runs the deployed (public) version of your site against the <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> API to help you stay on top of where you can improve.</p>
+
+</body>
+</html>
+

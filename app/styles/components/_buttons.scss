@@ -1,0 +1,41 @@
+// Simple ScrollUp Button
+.simplescrollup__button {
+  background: $logo_green;  
+  border-radius: 50%;
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	width: 5rem;
+  height: 5rem;
+	transition: 1s all;
+	z-index: 10000;
+	svg {
+  	position: relative;
+  	top: .875rem;
+  	left: 1rem;
+	}
+}
+.simplescrollup__button--show {
+	transform: translateX(0);
+}
+.simplescrollup__button--hide {
+	transform: translateX(100px);
+}
+
+.return-to-main {
+  background: $logo_green;  
+  border-radius: 50%;
+	position: fixed;
+	bottom: 3rem;
+	left: 3rem;
+	width: 5rem;
+  height: 5rem;
+  z-index: 10000;
+  svg {
+  	position: relative;
+  	top: 1rem;
+  	left: .875rem;
+  	transform: rotate(-90deg);
+	}
+  
+}

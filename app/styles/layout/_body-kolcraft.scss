@@ -1,0 +1,139 @@
+.cs--kolcraft { 
+  $spacing: 60vh;
+  margin: 0 auto;
+  header {
+    background: $percent_20;
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+  h1 {
+    @extend %tac;
+    color: $white;
+    position: relative;
+    z-index: 1;
+  }
+  .rotate {
+    transform: rotate(-3deg);
+    z-index: -1;  
+  }
+  .wrap--static {
+    h2.stencil {
+      margin-bottom: 3.5rem;
+    }
+    div {
+      max-width: 100rem;
+      margin: 0 auto;    
+      padding: 0 2rem;      
+    }
+    @include for-tablet-landscape-up {
+      margin-bottom: 4rem;
+    } 
+  }
+  h2.stencil.rotate {
+    margin-left: 10vw;
+  }
+  .stencil.static {
+    @include for-tablet-landscape-up {
+      padding-left: 10vw;
+      width: 75vw;
+    }
+  }
+  .wrap--sticky {
+    margin-bottom: 4rem;
+  }
+  .sticky {
+    background: $percent_20;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    height: 11rem;
+    position: sticky;
+    top: -1px;
+    z-index: 10;
+    @include for-tablet-landscape-up {
+      height: 15rem;
+    }
+  }
+  article {
+    padding: 0 0 $spacing;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100rem; 
+    .wrap--text {
+      background-color: rgba($black, 0.85);
+      color: $white;
+      margin-bottom: $spacing;
+      padding: 2rem 4rem;
+      @include for-tablet-landscape-up {
+        padding: 4rem 6rem;
+      }  
+    }
+    // Text links (lighter color for dark background)
+    a:not(.button) {
+      color: $percent_80;
+      &:visited {
+        color: $percent_60;      } 
+      &:active,
+      &:hover {
+        color: $white;
+      }
+    }    
+    ul {
+      padding-left: 2rem;
+    }
+  }
+  .wrap--image {
+    padding: 0; 
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  .wrap--sticky img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  figure {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    top: 11rem;
+    z-index: -1;
+    position: sticky;
+    @include for-tablet-landscape-up {
+      top: 14.75rem;
+    }
+  }
+  
+  .sample {
+    filter: blur(1px) grayscale(50%);  
+  }  
+  
+  .img--small {
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+  }
+  .img--large {
+    display: none;
+    @include for-tablet-landscape-up {
+      display: block;
+    }
+  }
+  .closing {
+    background: $percent_20;
+    color: $white;
+    div {
+      margin: 0 auto;
+      max-width: 100rem;
+      padding: 2rem 4rem;
+      @include for-tablet-landscape-up {
+        padding: 4rem 6rem;
+      }    
+    }
+  }
+}
