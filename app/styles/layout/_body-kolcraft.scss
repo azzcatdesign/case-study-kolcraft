@@ -22,7 +22,7 @@
     }
     div {
       max-width: 100rem;
-      margin: 0 auto;    
+      margin: 0 auto 3rem;    
       padding: 0 2rem;      
     }
     @include for-tablet-landscape-up {
@@ -127,6 +127,9 @@
   .closing {
     background: $percent_20;
     color: $white;
+    @include for-tablet-landscape-up {
+      margin-bottom: 0;
+    }
     div {
       margin: 0 auto;
       max-width: 100rem;

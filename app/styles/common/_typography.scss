@@ -8,11 +8,14 @@
 
 :root {
   font-size: 8px;  // grid height => 8px, font size => 15px
+
   // Push underlines to below descenders.
   // Not yet supported in all browsers, but
   // a nicety where available. 
+  text-underline-position: under;
+
   // Uncomment to show the grid
-  // background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
+  //background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
   background-size: 100% 8px;
 }
 
