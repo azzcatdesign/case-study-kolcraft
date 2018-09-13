@@ -1,3 +1,22 @@
+nav {
+  background: $percent_10;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 0 2rem;
+    @include for-tablet-landscape-up {
+      line-height: 1;
+      margin-top: 0;
+    } 
+  }
+}
 .cs--kolcraft { 
   $spacing: 60vh;
   margin: 0 auto;

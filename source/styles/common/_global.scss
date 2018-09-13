@@ -34,6 +34,29 @@
     }    
   }
   
+  // Nav links
+  a.link--nav {
+    @extend %uc;
+    background: none;
+    color: $percent_60;
+    display: block;
+    letter-spacing: 1px;
+    padding: 1.5rem 1rem 1rem;
+    text-decoration: none;
+    @include for-tablet-landscape-up {
+      //padding: 1rem;
+    }
+    &:visited {
+      color: $percent_80;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      color: $white;
+    }    
+  }
+
+    
   a.button {
     &:active,
     &:focus,
@@ -46,6 +69,7 @@
     outline: 2px solid $primary;
   }
 }
+
 
 // Custom :selection rules
 ::selection {
